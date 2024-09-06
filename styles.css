@@ -36,6 +36,9 @@ main {
 
 /* Changes color when we pass over each square with the mouse */
 
+.trail {
+    background-color: #000; /* Color of the pen trail*/
+}
 
 footer {
     background-color: #ffffff;
