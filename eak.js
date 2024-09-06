@@ -30,25 +30,9 @@ const hoverColor = () => {
         item.addEventListener('mouseover', () => {
            const color = randomColor();
            item.style.backgroundColor = color;
-           addTrail(item, color);
+        
         });
     });
-};
-
-// Add a simple trail effect
-const addTrail = (square, color) => {
-    // Add the 'trail' class to the square itself
-    square.classList.add('trail');
-
-    // Optionally, add a small trail effect by adding a class to adjacent squares
-    const index = Array.from(squareCont.children).indexOf(square);
-    const row = Math.floor(index / 16);
-    const col = index % 16;
-
-    if (row > 0) squareCont.children[(row - 1) * 16 + col].classList.add('trail');
-    if (row < 15) squareCont.children[(row + 1) * 16 + col].classList.add('trail');
-    if (col > 0) squareCont.children[row * 16 + (col - 1)].classList.add('trail');
-    if (col < 15) squareCont.children[row * 16 + (col + 1)].classList.add('trail');
 };
 
 
