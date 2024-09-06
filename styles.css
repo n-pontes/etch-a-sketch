@@ -33,6 +33,12 @@ main {
     box-sizing: border-box; /* Ensures border is included in width/height calculations */
 }
 
+/* Changes color when we pass over each square with the mouse */
+
+.square:hover {
+    background-color: aquamarine;
+}
+
 footer {
     background-color: #ffffff;
     color: #333;
