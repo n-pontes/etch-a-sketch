@@ -34,3 +34,12 @@ main {
     border: 1px solid #000; /* To visualize the item boundaries */
     box-sizing: border-box; /* Ensures border is included in width/height calculations */
 }
+
+footer {
+    background-color: #ffffff;
+    color: #333;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
