@@ -13,5 +13,22 @@ let makeSquares = () => {
     squareCont.appendChild(newSquare);
 }
 
+// To add a random color to the divs on hover
+
+const randomColor = () => {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i ++) {
+        color += letters[Math.random() * 16];
+    }
+}
+
+const hoverCOlor = () => {
+    let items = document.querySelectorAll('.square');
+    items.forEach(item => {
+        item.style.backgroundColor = `${randomColor()}`;
+    });
+}
+
 // Call the function to create the squares
 makeSquares();
