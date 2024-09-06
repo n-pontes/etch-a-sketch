@@ -19,16 +19,21 @@ const randomColor = () => {
     let letters = '0123456789ABCDEF';
     let color = '#';
     for (let i = 0; i < 6; i ++) {
-        color += letters[Math.random() * 16];
+        color += letters[Math.floor(Math.random() * 16)];
     }
-}
+    return color; // Return the generated color
+};
 
-const hoverCOlor = () => {
+const hoverColor = () => {
     let items = document.querySelectorAll('.square');
     items.forEach(item => {
-        item.style.backgroundColor = `${randomColor()}`;
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = randomColor();
+        });
     });
-}
+};
 
 // Call the function to create the squares
 makeSquares();
+// Add hover effect
+hoverColor()
