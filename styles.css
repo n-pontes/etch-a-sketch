@@ -4,17 +4,19 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-color: #f5f5f5; /* Light gray background */
-    color: #333; /* Dark text */
+    background-color: #f5f5f5;
+    color: #333;
     align-items: center;
+    justify-content: center; /* Center items vertically */
 }
 
 .sContainer {
     display: flex;
     flex-wrap: wrap; 
-    width: 356px; 
-    height: 356px; 
+    width: 256px; 
+    height: 270px; 
     background-color: lightgrey; /* Temporary color for visibility */
+    border: 1px solid black; /* Optional: To visualize the container boundaries */
 }
 
 .square {
@@ -23,4 +25,5 @@ body {
     width: 16px;
     background-color: brown; /* To ensure visibility */
     border: 1px solid #000; /* To visualize the item boundaries */
+    box-sizing: border-box; /* Ensures border is included in width/height calculations */
 }
