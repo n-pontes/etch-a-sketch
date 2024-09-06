@@ -35,9 +35,6 @@ main {
 
 /* Changes color when we pass over each square with the mouse */
 
-.square:hover {
-    background-color: aquamarine;
-}
 
 footer {
     background-color: #ffffff;
