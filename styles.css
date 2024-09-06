@@ -31,6 +31,7 @@ main {
     background-color: rgb(214, 211, 211); /* To ensure visibility */
     border: 1px solid #bcbcbc; /* To visualize the item boundaries */
     box-sizing: border-box; /* Ensures border is included in width/height calculations */
+    transition: background-color 0.3s ease; /* Smooth color transition */
 }
 
 /* Changes color when we pass over each square with the mouse */
