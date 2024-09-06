@@ -1,4 +1,6 @@
 .square {
     height: 16px;
     width: 16px;
+    background-color: brown;
+    border: 1px solid #000000; /* Useful for border visibility*/
 }
