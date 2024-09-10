@@ -1,6 +1,29 @@
 const squareCont = document.querySelector('.sContainer');
 const reset = document.querySelector('.resetGrid');
 
+reset.addEventListener('click', () => {
+    resetSize();
+});
+
+let resetSize = () => {
+    let selectNumber = prompt('Please input the grid size, from 1-100');
+
+    // Validate user input
+    if (selectNumber < 1 || selectNumber > 100 || isNaN(selectNumber)) {
+        alert('Please enter a valid number between 1 and 100.');
+        return;
+    }
+
+    // Clear the existing grid
+    squareCont.innerHTML = '';
+
+    // Rebuild the grid with the new size
+    makeGrid(selectNumber);
+
+    // Reapply hover effect
+    hoverColor();
+};
+
 // Creates a grid based on the size parameter (e.g., 16 for a 16x16 grid)
 
 let makeGrid = (size) => {
