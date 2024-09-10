@@ -3,6 +3,26 @@ const resetButton = document.querySelector('.resetGrid');
 const slider = document.querySelector('#gridSize');
 const gridValue = document.querySelector('#gridValue');
 
+// Creates a grid based on the size parameter (e.g., 16 for a 16x16 grid)
+const makeGrid = (size) => {
+    squareCont.innerHTML = ''; // Clears existing grid
+    squareCont.style.width = '640px';
+    squareCont.style.height = '640px';
+
+    const newSquare = document.createDocumentFragment(); // Create the fragment inside the function
+    for (let i = 0; i < size * size; i++) {
+        const square = document.createElement('div');
+        square.classList.add('square'); // Add the 'square' class to each div
+        square.style.flex = `0 0 calc(100% / ${size})`; 
+        square.style.height = `calc(100% / ${size})`;
+        newSquare.appendChild(square);
+    }
+
+    // Appends the created squares to the container
+    squareCont.appendChild(newSquare);
+    addHoverEffect();
+}
+
 // Add an event listener to the button and calls the resetButton function
 
 reset.addEventListener('click', () => {
@@ -29,28 +49,6 @@ let resetSize = () => {
     // Reapply hover effect
     hoverColor();
 };
-
-// Creates a grid based on the size parameter (e.g., 16 for a 16x16 grid)
-
-let makeGrid = (size) => {
-    squareCont.innerHTML = ''; // Clears existing grid
-    const newSquare = document.createDocumentFragment(); // Create the fragment inside the function
-
-    // Loop to create the grid
-    for (let i = 0; i < size * size; i++) {
-        const square = document.createElement('div');
-        square.classList.add('square'); // Add the 'square' class to each div
-        newSquare.appendChild(square);
-    }
-
-    // Appends the created squares to the container
-    squareCont.appendChild(newSquare);
-
-    document.querySelectorAll('.square').forEach(square => {
-        square.style.flexBasis = `${640 / size}px`;
-        square.style.height = `${640 / size}px`;
-    });
-}
 
 // To add a random color to the divs on hover
 
