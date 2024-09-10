@@ -69,79 +69,27 @@ label {
     font-size: 1rem;
 }
 
+/* Grid container */
 .sContainer {
     display: flex;
-    flex-wrap: wrap; 
-    width: 640px; 
-    height: 640px; 
-    background-color: lightgrey; /* Temporary color for visibility */
-    border: 1px solid #ddd; /* Optional: To visualize the container boundaries */
+    flex-wrap: wrap;
+    width: 640px;
+    height: 640px;
+    background-color: #ddd;
+    border: 2px solid #bbb;
 }
 
+/* Grid items */
 .square {
-    flex: 0 0 auto; 
-    background-color: rgb(214, 211, 211); /* To ensure visibility */
-    border: 1px solid #bcbcbc; /* To visualize the item boundaries */
-    box-sizing: border-box; /* Ensures border is included in width/height calculations */
-    transition: background-color 0.3s ease; /* Smooth color transition */
+    flex: 0 0 calc(100% / 16); /* Default for 16x16 grid */
+    height: calc(100% / 16);
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    transition: background-color 0.3s ease;
 }
 
-.resetGrid {
-  margin-top: 10px;
-  appearance: none;
-  background-color: #FAFBFC;
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-  box-sizing: border-box;
-  color: #24292E;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  padding: 6px 16px;
-  position: relative;
-  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
-  word-wrap: break-word;
-}
-
-.resetGrid:hover {
-  background-color: #F3F4F6;
-  text-decoration: none;
-  transition-duration: 0.1s;
-}
-
-.resetGrid:disabled {
-  background-color: #FAFBFC;
-  border-color: rgba(27, 31, 35, 0.15);
-  color: #959DA5;
-  cursor: default;
-}
-
-.resetGrid:active {
-  background-color: #EDEFF2;
-  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
-  transition: none 0s;
-}
-
-.resetGrid:focus {
-  outline: 1px transparent;
-}
-
-.resetGrid:before {
-  display: none;
-}
-
-.resetGrid:-webkit-details-marker {
-  display: none;
+.square:hover {
+    background-color: #333;
 }
 
 
