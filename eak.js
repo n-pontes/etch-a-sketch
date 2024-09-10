@@ -3,7 +3,7 @@ const reset = document.querySelector('.resetGrid');
 
 // Creates 256 divs in a 16x16 grid
 
-let makeSquares = () => {
+let makeGrid = () => {
     const newSquare = document.createDocumentFragment(); // Create the fragment inside the function
     for (let i = 0; i < 256; i++) {
         const square = document.createElement('div');
@@ -38,6 +38,6 @@ const hoverColor = () => {
 
 
 // Call the function to create the squares
-makeSquares();
+makeGrid();
 // Add hover effect
 hoverColor()
