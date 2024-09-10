@@ -14,6 +14,7 @@ let makeGrid = (size) => {
         newSquare.appendChild(square);
     }
 
+    // Appends the created squares to the container
     squareCont.appendChild(newSquare);
 }
 
