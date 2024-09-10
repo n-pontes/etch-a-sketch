@@ -23,6 +23,24 @@ const makeGrid = (size) => {
     addHoverEffect();
 }
 
+// To add a random color to the divs on hover
+const randomColor = () => {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i ++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color; // Return the generated color
+};
+
+const addHoverEffect = () => {
+    document.querySelectorAll('.square').forEach(square => {
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = randomColor();
+        });
+    });
+};
+
 // Add an event listener to the button and calls the resetButton function
 
 reset.addEventListener('click', () => {
@@ -49,29 +67,6 @@ let resetSize = () => {
     // Reapply hover effect
     hoverColor();
 };
-
-// To add a random color to the divs on hover
-
-const randomColor = () => {
-    let letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i ++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color; // Return the generated color
-};
-
-const hoverColor = () => {
-    let items = document.querySelectorAll('.square');
-    items.forEach(item => {
-        item.addEventListener('mouseover', () => {
-           const color = randomColor();
-           item.style.backgroundColor = color;
-        
-        });
-    });
-};
-
 
 // Call the function to create the squares
 makeGrid(33);
