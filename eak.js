@@ -45,8 +45,8 @@ const addHoverEffect = () => {
 
 // Resets grid size
 resetButton.addEventListener('click', () => {
-    const size = parseInt(prompt("Enter new grid size between 16 and 100"));
-    if (size >= 16 && size <= 100) {
+    const size = parseInt(prompt("Enter new grid size between 1 and 100"));
+    if (size >= 1 && size <= 100) {
         makeGrid(size);
         slider.value = size;
         gridValue.textContent = size;
