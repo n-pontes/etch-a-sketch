@@ -2,18 +2,12 @@
 
 Implementation of Etch A Sketch for The Odin Project curriculum.
 
-## First stage | Game in the browser console
-
-(under construction)
-
+## Stage with Added UI
 ### Benefits from this stage:
 
-(under construction)
-
-## Second stage | Game with Added UI
-### Benefits I got from this stage:
-
-(under construction)
++ Enhanced understanding of CSS Flexbox for layout management.
++ Improved skills in JavaScript event handling and dynamic DOM manipulation.
++ Gained experience in creating interactive and responsive web applications.
 
 ## Built with
 ### Technologies
@@ -28,12 +22,14 @@ Implementation of Etch A Sketch for The Odin Project curriculum.
 
 ## Summary
 
-This project involves creating a Etch a Sketch, it is a "doodling" app of sorts that allows the user to draw on a grid of square <div>'s.
+This project involves creating an Etch-A-Sketch application—a "doodling" app that allows users to draw on a grid of squares. Users can hover over the grid to draw and dynamically adjust the grid size with a reset button.
 
 ## Key Features:
 
-(under construction)
++ Dynamic grid size adjustment.
++ Interactive drawing with color changes.
++ Responsive design for various screen sizes.
 
 ## What is Etch-a-Sketch?
 
-(under construction)
+Etch-A-Sketch is a classic drawing toy that allows users to create pictures by turning knobs to move a stylus over a screen. This web application emulates that experience digitally, providing a fun and interactive way to draw and experiment with different grid sizes and colors.
