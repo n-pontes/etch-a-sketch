@@ -1,13 +1,13 @@
 const squareCont = document.querySelector('.sContainer');
 const reset = document.querySelector('.resetGrid');
 
-// Adds an event listener to the button and calls the resetButton function
+// Add an event listener to the button and calls the resetButton function
 
 reset.addEventListener('click', () => {
     resetSize();
 });
 
-// Redefines the grid size
+// Redefine the grid size
 
 let resetSize = () => {
     let selectNumber = prompt('Please input the grid size, from 1-100');
