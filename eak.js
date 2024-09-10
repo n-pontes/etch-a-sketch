@@ -1,4 +1,5 @@
 const squareCont = document.querySelector('.sContainer');
+const reset = document.querySelector('.resetGrid');
 
 // Creates 256 divs in a 16x16 grid
 
