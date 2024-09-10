@@ -1,11 +1,14 @@
 const squareCont = document.querySelector('.sContainer');
 const reset = document.querySelector('.resetGrid');
 
-// Creates 256 divs in a 16x16 grid
+// Creates a grid based on the size parameter (e.g., 16 for a 16x16 grid)
 
-let makeGrid = () => {
+let makeGrid = (size) => {
+    squareCont.innerHTML = ''; // Clears existing grid
     const newSquare = document.createDocumentFragment(); // Create the fragment inside the function
-    for (let i = 0; i < 256; i++) {
+
+    // Loop to create the grid
+    for (let i = 0; i < size * size; i++) {
         const square = document.createElement('div');
         square.classList.add('square'); // Add the 'square' class to each div
         newSquare.appendChild(square);
