@@ -42,11 +42,6 @@ const addHoverEffect = () => {
     });
 };
 
-// Add an event listener to the button and calls the resetButton function
-
-reset.addEventListener('click', () => {
-    resetSize();
-});
 
 // Resets grid size
 resetButton.addEventListener('click', () => {
