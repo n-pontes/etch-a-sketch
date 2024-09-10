@@ -16,6 +16,11 @@ let makeGrid = (size) => {
 
     // Appends the created squares to the container
     squareCont.appendChild(newSquare);
+
+    document.querySelectorAll('.square').forEach(square => {
+        square.style.flexBasis = `${640 / size}px`;
+        square.style.height = `${640 / size}px`;
+    });
 }
 
 // To add a random color to the divs on hover
@@ -42,6 +47,6 @@ const hoverColor = () => {
 
 
 // Call the function to create the squares
-makeGrid();
+makeGrid(33);
 // Add hover effect
 hoverColor()
