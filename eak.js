@@ -1,5 +1,7 @@
 const squareCont = document.querySelector('.sContainer');
-const reset = document.querySelector('.resetGrid');
+const resetButton = document.querySelector('.resetGrid');
+const slider = document.querySelector('#gridSize');
+const gridValue = document.querySelector('#gridValue');
 
 // Add an event listener to the button and calls the resetButton function
 
