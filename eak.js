@@ -33,6 +33,7 @@ const randomColor = () => {
     return color; // Return the generated color
 };
 
+// Adds a mouse over effect 
 const addHoverEffect = () => {
     document.querySelectorAll('.square').forEach(square => {
         square.addEventListener('mouseover', () => {
@@ -47,28 +48,22 @@ reset.addEventListener('click', () => {
     resetSize();
 });
 
-// Redefine the grid size
-
-let resetSize = () => {
-    let selectNumber = prompt('Please input the grid size, from 1-100');
-
-    // Validate user input
-    if (selectNumber < 1 || selectNumber > 100 || isNaN(selectNumber)) {
-        alert('Please enter a valid number between 1 and 100.');
-        return;
+// Resets grid size
+resetButton.addEventListener('click', () => {
+    const size = parseInt(prompt("Enter new grid size between 16 and 100"));
+    if (size >= 16 && size <= 100) {
+        makeGrid(size);
+        slider.value = size;
+        gridValue.textContent = size;
     }
+});
 
-    // Clear the existing grid
-    squareCont.innerHTML = '';
+// Slider input for grid size
+slider.addEventListener('input', (e) => {
+    const size = e.target.value;
+    gridValue.textContent = size;
+    makeGrid(size);
+});
 
-    // Rebuild the grid with the new size
-    makeGrid(selectNumber);
-
-    // Reapply hover effect
-    hoverColor();
-};
-
-// Call the function to create the squares
-makeGrid(33);
-// Add hover effect
-hoverColor()
+// Initialize
+makeGrid(16);
