@@ -33,3 +33,6 @@ This project involves creating an Etch-A-Sketch application—a "doodling" app t
 ## What is Etch-a-Sketch?
 
 Etch-A-Sketch is a classic drawing toy that allows users to create pictures by turning knobs to move a stylus over a screen. This web application emulates that experience digitally, providing a fun and interactive way to draw and experiment with different grid sizes and colors.
+
+Live: https://n-pontes.github.io/etch-a-sketch/
+![image](https://github.com/user-attachments/assets/a122ca93-6007-43e1-a1ed-b756f7044b44)
